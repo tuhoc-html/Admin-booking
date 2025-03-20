@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import BookingStatusTabs from "./components/BookingStatusTabs";
 import RoomManagement from "./pages/RoomManagement";
+import HotelInfo from "./pages/HotelInfo";
 
 const { Content } = Layout;
 
@@ -50,7 +51,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/bookings" element={<BookingStatusTabs />} />
             <Route path="/room-management" element={<RoomManagement />} />
-            {/* Add more routes for other pages as needed */}
+            <Route path="/edit-hotel" element={<HotelInfo />} />
           </Routes>
         </Content>
       </Layout>

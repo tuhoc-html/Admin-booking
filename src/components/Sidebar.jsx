@@ -9,6 +9,7 @@ import {
   EditOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import hotelLogo from "../assets/hotel.png";
 
 const { Sider } = Layout;
 
@@ -61,7 +62,7 @@ const Sidebar = ({ onCollapse }) => {
     {
       key: "4",
       icon: <EditOutlined />,
-      label: "Chỉnh sửa thông tin khách sạn",
+      label: "Thông tin khách sạn",
       path: "/edit-hotel",
     },
   ];
@@ -81,7 +82,12 @@ const Sidebar = ({ onCollapse }) => {
         {collapsed ? (
           <div className="text-xl font-bold text-orange-500">HB</div>
         ) : (
-          <div className="text-xl font-bold text-orange-500">Hotel Booking</div>
+          <div className="flex items-center gap-2">
+            <img src={hotelLogo} alt="Hotel Logo" className="w-8 h-8" />
+            <div className="text-xl font-bold text-orange-500">
+              Hotel Booking
+            </div>
+          </div>
         )}
       </div>
       <div className="p-4">
